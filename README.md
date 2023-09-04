@@ -44,3 +44,22 @@ e.g. `python3 ktrans-gen-emb.py -i ./ida_outputs -o ./saved_emb -m ./ktrans-110M
 python3 ktrans-gen-emb.py -i /path/to/pickles_gen_by_ida -o /path/to/saved_embeddings -m /path/to/kTrans_model -n num_workers_for_dataloader -bs inference_batch_size
 ```
 
+
+## Acknowledgement
+This project is not possible without multiple great open-sourced code bases. We list some notable examples below.
+
+* [transformers](https://github.com/huggingface/transformers)
+* [lightning](https://github.com/lightning-ai/lightning)
+
+## Bibtex
+If this work or BinaryCorp dataset are helpful for your research, please consider citing the following BibTeX entry.
+
+```
+@article{zhu2023ktrans,
+  title={kTrans: Knowledge-Aware Transformer for Binary Code Embedding},
+  author={Zhu, Wenyu and Wang, Hao and Zhou, Yuchen and Wang, Jiaming and Sha, Zihan and Gao, Zeyu and Zhang, Chao},
+  journal={arXiv preprint arXiv:2308.12659},
+  year={2023}
+}
+```
+
