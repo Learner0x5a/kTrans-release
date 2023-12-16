@@ -2,7 +2,31 @@
 
 This repo is the official code of **kTrans: Knowledge-Aware Transformer for Binary Code Embedding**.
 
+*This repo provide the source code, the pretrained model as well as Quick Start of kTrans.*
+
+ * kTrans provides **general-purpose** binary code embeddings with knowledge integration. 
+ * kTrans is **scalable**. It does not require heavyweight program analysis, but only an arbitrary disassembly tool (e.g. IDA Pro) to obtain function instructions and retrieve knowledge. 
+ * kTrans is **flexible**. Knowledge is Optional. One can use kTrans to generate binary code embeddings without knowledge, i.e., only assembly text.
+
 ![Illustrating the performance on BSCD of kTrans](/figures/poolsizecompare.png)
+
+## Contents
+
+```
+.
+|-- AsmLM                                        # Source code of kTrans
+|   |-- dataloader                               # Dataset, Tokenizer, Vocab
+|   `-- model                                    # Model Arch, Pretrain Task
+|-- demo_bin                                     # Example binary for embedding generation
+|   `-- ls
+|-- README.md
+|-- config.py                                    # Configuration
+|-- ktrans-110M-epoch-2.ckpt                     # Pretrained model
+|-- asmlm.py                                     # Model Trainer
+|-- insn_rw.py                                   # IDAPython Script for knowledge generation
+`-- ktrans-gen-emb.py                            # Main script for embedding generation
+```
+
 
 ## Requirements
  - NVIDIA GPU
