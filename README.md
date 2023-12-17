@@ -49,7 +49,7 @@ $ md5sum ktrans-110M-epoch-2.ckpt
 ## Usage to generate embedding from a given binary program
 
 
-## 1. Generate instructions along with metadata with IDA
+### 1. Generate instructions along with metadata with IDA
 This step generates a pickle file containing a list of [instruction addresses,disassembly,instruction,operand type, operand r/w status, eflags]
 
 e.g. `/root/idapro-7.6/idat64 -L"ida.log" -A -S"./insn_rw.py ./ida_outputs" ./demo_bin/ls`
@@ -59,7 +59,7 @@ e.g. `/root/idapro-7.6/idat64 -L"ida.log" -A -S"./insn_rw.py ./ida_outputs" ./de
 /path/to/ida -L"ida.log" -A -S"./insn_rw.py output_dir" /path/to/target_binary
 ```
 
-## 2. Generate embedding with kTrans
+### 2. Generate embedding with kTrans
 This step generates embedding with kTrans and stores the output into a pickle file (numpy.ndarray in shape (num_functions, embedding_dim))
 
 e.g. `python3 ktrans-gen-emb.py -i ./ida_outputs -o ./saved_emb -m ./ktrans-110M-epoch-2.ckpt -n 32 -bs 128`
@@ -68,6 +68,11 @@ e.g. `python3 ktrans-gen-emb.py -i ./ida_outputs -o ./saved_emb -m ./ktrans-110M
 python3 ktrans-gen-emb.py -i /path/to/pickles_gen_by_ida -o /path/to/saved_embeddings -m /path/to/kTrans_model -n num_workers_for_dataloader -bs inference_batch_size
 ```
 
+## Datasets used in this work
+
+ * [BinaryCorp](https://github.com/vul337/jTrans)
+ * [EKLAVYA](https://github.com/shensq04/EKLAVYA)
+ * [Callee](https://github.com/Learner0x5a/Callee-Dataset)
 
 ## Acknowledgement
 This project is not possible without multiple great open-sourced code bases. We list some notable examples below.
