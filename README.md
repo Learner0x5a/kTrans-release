@@ -1,8 +1,6 @@
 # kTrans: Knowledge-Aware Transformer for Binary Code Embedding
 
-This repo is the official code of **kTrans: Knowledge-Aware Transformer for Binary Code Embedding**.
-
-*This repo provide the source code, the pretrained model as well as Quick Start of kTrans.*
+*This repo provide the source code, the pretrained model as well as Quick Start of [kTrans](https://arxiv.org/abs/2308.12659).*
 
  * kTrans provides **general-purpose** binary code embeddings with knowledge integration. 
  * kTrans is **scalable**. It does not require heavyweight program analysis, but only an arbitrary disassembly tool (e.g. IDA Pro) to obtain function instructions and retrieve knowledge. 
